@@ -7,12 +7,7 @@ public class Intrucciones {
 //	1:
 
 //	
-//	List<Ob negocioa> agrir (string f)
-//	
-//	guardar (list <obxetonegocio> data, string  f)
-//	
-//	opcional: add(fii f, obxetonegocio o)
-//
+
 //	
 //	
 //	2: //non gardan en disco, tood e en memoeria -> non tgen file por ningun lado
