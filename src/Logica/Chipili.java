@@ -18,7 +18,7 @@ public class Chipili {//	2: //non gardan en disco, tood e en memoeria -> non tge
 		
 	}
 	
-	public List<NegObj> getBy(String file, String by){
+	public List<NegObj> getBy(String file, String by){ 
 		
 		return null;
 	}
