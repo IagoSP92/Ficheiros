@@ -14,6 +14,31 @@ import Datos.model.NegObj;
 import Datos.model.Person;
 
 public class FileUtils {
+	
+	
+	public static Boolean comprobarExistenciaFichero (String fichero)
+			throws IOException {
+		
+		File toFile = new File(fichero);
+		
+		if(toFile.exists()) {
+			return true;
+		} else {
+			return toFile.createNewFile();
+		}
+	}
+	
+	public static Boolean comprobarExistenciaDirectorio(String uploadPath) {
+        // creates the directory if it does not exist       
+        File uploadDir = new File(uploadPath);
+        if (!uploadDir.exists()) {
+            if(!uploadDir.mkdirs()) {
+            	return false;
+            }
+            return true;
+        }
+        return true;		
+	}
 
 	//	List<Ob negocioa> agrir (string f)
 	//	
@@ -26,9 +51,11 @@ public class FileUtils {
 	public static List<NegObj> abrir (String file) throws IOException {
 
 		File fromFile = new File(file);
+		
 		if(fromFile.exists()){
 
 			List<NegObj> lista = new ArrayList<NegObj>();
+			
 			FileReader fr = new FileReader(fromFile);
 			BufferedReader br = new BufferedReader(fr);
 
@@ -71,6 +98,8 @@ public class FileUtils {
 
 		return null;
 	}
+
+	
 
 	
 	public static void guardar (List<NegObj> lista, String ficheiro, Boolean crear) throws IOException {
